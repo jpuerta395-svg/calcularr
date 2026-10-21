@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo de Ventas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="icon-title">🛒</div>
+        <div>
+            <h1>ALGORITMO DE VENTAS</h1>
+            <p class="subtitle">Calcula fácilmente el precio total de una compra.</p>
+        </div>
+        <div class="icon-title">💰</div>
+    </header>
+
+    <!-- Contenedor Principal Grid -->
+    <main class="grid-container">
+
+        <!-- Columna Izquierda -->
+        <div class="left-column">
+            
+            <!-- Panel Entrada de Datos -->
+            <section class="card input-card">
+                <div class="badge badge-blue">ENTRADA DE DATOS</div>
+                
+                <div class="form-group">
+                    <label for="precio">Precio del producto:</label>
+                    <div class="input-icon-wrapper">
+                        <span>$</span>
+                        <input type="number" id="precio" placeholder="0">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="cantidad">Cantidad de productos:</label>
+                    <input type="number" id="cantidad" placeholder="0">
+                </div>
+
+                <button id="btn-calcular" class="btn-primary">[ Calcular total ]</button>
+            </section>
+
+            <!-- Panel Resumen -->
+            <section class="card summary-card">
+                <div class="badge badge-purple">RESUMEN</div>
+                
+                <ul class="summary-list">
+                    <li><strong>Operación:</strong> multiplicación.</li>
+                    <li><strong>Objetivo:</strong> evitar errores en las cuentas.</li>
+                    <li><strong>Ventaja:</strong> ahorrar tiempo.</li>
+                </ul>
+
+                <div class="example-box">
+                    <div class="example-badge">Ejemplo:</div>
+                    <p>Si un producto cuesta <strong>$5.000</strong> y el cliente compra <strong>3 unidades</strong>:</p>
+                    <div class="pill pill-purple">5.000 × 3 = 15.000</div>
+                    <div class="pill pill-green">Total a pagar: $15.000</div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Columna Derecha -->
+        <div class="right-column">
+            
+            <div class="process-header">
+                <span class="badge badge-teal">PASOS</span>
+                <span class="badge badge-purple">PROCESO</span>
+            </div>
+
+            <!-- Paso 1 -->
+            <article class="process-card card-orange">
+                <div class="process-icon">🛒</div>
+                <div class="process-content">
+                    <h3>CALCULAR COMPRA</h3>
+                    <p>Precio × cantidad</p>
+                    <span id="status-step-1" class="status-badge pending">PENDIENTE</span>
+                </div>
+                <div class="process-actions">
+                    <input type="checkbox">
+                    <div class="action-icons">✏️ 🗑️</div>
+                </div>
+            </article>
+
+            <!-- Paso 2 -->
+            <article class="process-card card-green">
+                <div class="process-icon">🧮</div>
+                <div class="process-content">
+                    <h3>TOTAL A PAGAR</h3>
+                    <p id="calc-text-result">Resultado de la multiplicación</p>
+                    <span id="status-step-2" class="status-badge pending">PENDIENTE</span>
+                </div>
+                <div class="process-actions">
+                    <input type="checkbox">
+                    <div class="action-icons">✏️ 🗑️</div>
+                </div>
+            </article>
+
+            <!-- Paso 3 -->
+            <article class="process-card card-purple">
+                <div class="process-icon">☑️</div>
+                <div class="process-content">
+                    <h3>VENTA FINALIZADA</h3>
+                    <p id="final-text-result">Mostrar el valor que debe pagar el cliente.</p>
+                    <span id="status-step-3" class="status-badge pending">PENDIENTE</span>
+                </div>
+                <div class="process-actions">
+                    <input type="checkbox">
+                    <div class="action-icons">✏️ 🗑️</div>
+                </div>
+            </article>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
